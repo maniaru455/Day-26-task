@@ -27,27 +27,33 @@ function App() {
               <li>
                 <Link to="/students">Student Journery</Link>
               </li>
-              <li>Mentor Journery</li>
-              <li>Session Journery</li>
+              <li>
+                <Link to="/mentor">Mentor Journery</Link>
+              </li>
+              <li>
+                <Link to="/session">Session Journery</Link>
+              </li>
             </ul>
           </nav>
         </div>
         <div id="zen-content-area" className="zen-content-area">
+          <div id="zen-header-bar" className="zen-header">
 
+          </div>
 
+          <Routes>
+            <Route path="students" Component={StudentsJourney}>
+              <Route path="create" Component={CreateStudents} />
+              <Route path="manage" Component={ManageStudents} />
+            </Route>
+
+            <Route path="session" Component={SessionJourney}>
+            </Route>
+          </Routes>
         </div>
 
-        <Routes>
-          <Route path="students" Component={StudentsJourney}>
-            <Route path="create" Component={CreateStudents} />
-            <Route path="manage" Component={ManageStudents} />
-          </Route>
-
-        </Routes>
       </div>
-
     </div>
-    </div >
   );
 }
 
