@@ -47,8 +47,8 @@ function App() {
               <Route path="manage" Component={ManageStudents} />
             </Route>
 
-            <Route path="session" Component={SessionJourney}>
-            </Route>
+
+
           </Routes>
         </div>
 
